@@ -1,0 +1,86 @@
+/* zhuansheng-share — 专升本历程分享 · 深蓝+白 · 简约励志 */
+.tpl-zsb{
+  --bg:#ffffff;--bg-soft:#f3f7fd;--surface:#ffffff;--surface-2:#eef3fb;
+  --border:rgba(15,44,107,.10);--border-strong:rgba(15,44,107,.22);
+  --text-1:#0c1c3d;--text-2:#44526f;--text-3:#8693ad;
+  --accent:#1d4ed8;--accent-2:#2563eb;--accent-3:#3b82f6;
+  --navy:#0f2c6b;
+  --grad:linear-gradient(135deg,#0f2c6b 0%,#1d4ed8 55%,#3b82f6 100%);
+  --grad-soft:linear-gradient(135deg,#e8eefb,#eef4ff 55%,#f3f9ff);
+  --radius:18px;--radius-lg:26px;
+  --shadow:0 14px 38px rgba(15,44,107,.10),0 2px 8px rgba(15,44,107,.05);
+  font-family:'Inter','Noto Sans SC',sans-serif;
+}
+.tpl-zsb .slide{padding:78px 104px}
+.tpl-zsb .slide > *{position:relative;z-index:1}
+
+/* ---- backgrounds ---- */
+.tpl-zsb .cover-bg{position:absolute;inset:0;background:var(--grad-soft);z-index:-1}
+.tpl-zsb .cover-blob{position:absolute;right:-160px;top:-160px;width:600px;height:600px;border-radius:50%;
+  background:var(--grad);filter:blur(10px);opacity:.30;z-index:-1}
+.tpl-zsb .cover-blob.b2{right:auto;left:-200px;top:auto;bottom:-220px;width:520px;height:520px;opacity:.16}
+
+/* ---- typography ---- */
+.tpl-zsb .h1{font-size:80px;line-height:1.06;font-weight:900;letter-spacing:-.035em;color:var(--text-1)}
+.tpl-zsb .h2{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1.12}
+.tpl-zsb .gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.tpl-zsb .kicker{color:var(--accent);font-weight:700;letter-spacing:.14em}
+.tpl-zsb .num-tag{font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.16em}
+.tpl-zsb .lede{font-size:23px;line-height:1.6;color:var(--text-2);font-weight:400}
+.tpl-zsb .section-num{font-size:230px;font-weight:900;line-height:.9;color:var(--surface-2);
+  position:absolute;right:64px;bottom:28px;z-index:0;letter-spacing:-.05em}
+
+/* ---- cover ---- */
+.tpl-zsb .brand-dot{display:inline-block;width:13px;height:13px;border-radius:50%;background:var(--grad);margin-right:10px;vertical-align:middle}
+.tpl-zsb .brand{font-weight:800;font-size:20px;letter-spacing:.02em;color:var(--navy)}
+.tpl-zsb .cover-meta{display:flex;gap:40px;margin-top:44px;color:var(--text-2);font-size:17px}
+.tpl-zsb .cover-meta b{color:var(--text-1);font-weight:700}
+
+/* ---- pills / divider ---- */
+.tpl-zsb .pill-accent{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);
+  border:1px solid color-mix(in srgb,var(--accent) 26%,transparent);font-size:14px;padding:6px 16px;font-weight:600}
+.tpl-zsb .divider-accent{height:4px;width:70px;background:var(--grad);border-radius:3px;margin:18px 0 4px}
+
+/* ---- agenda (目录) ---- */
+.tpl-zsb .agenda{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;margin-top:36px}
+.tpl-zsb .agenda-item{display:flex;align-items:center;gap:22px;padding:14px 4px;border-bottom:1px solid var(--border)}
+.tpl-zsb .agenda-item .idx{font-size:34px;font-weight:900;color:var(--accent-3);min-width:54px;letter-spacing:-.04em;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.tpl-zsb .agenda-item .label{font-size:21px;font-weight:600;color:var(--text-1)}
+
+/* ---- numbered point cards ---- */
+.tpl-zsb .point-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}
+.tpl-zsb .point{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:26px 28px 26px 26px;box-shadow:var(--shadow);display:flex;gap:20px;align-items:flex-start;
+  border-left:4px solid var(--accent)}
+.tpl-zsb .point .badge{min-width:46px;height:46px;border-radius:13px;background:var(--grad);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;flex:0 0 auto}
+.tpl-zsb .point h4{font-size:22px;font-weight:800;color:var(--text-1);margin:2px 0 7px}
+.tpl-zsb .point p{font-size:16.5px;line-height:1.6;color:var(--text-2);margin:0}
+
+/* ---- stage cards (备考历程) ---- */
+.tpl-zsb .stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.tpl-zsb .stage{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:30px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.tpl-zsb .stage::before{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:var(--grad)}
+.tpl-zsb .stage .snum{font-size:46px;font-weight:900;letter-spacing:-.04em;line-height:1;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.tpl-zsb .stage .sphase{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-top:14px}
+.tpl-zsb .stage h4{font-size:25px;font-weight:800;color:var(--text-1);margin:6px 0 16px}
+.tpl-zsb .stage ul{margin:0;padding:0;list-style:none}
+.tpl-zsb .stage li{position:relative;padding-left:22px;font-size:16px;line-height:1.55;color:var(--text-2);margin-bottom:11px}
+.tpl-zsb .stage li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--accent-3)}
+
+/* ---- closing (致谢) ---- */
+.tpl-zsb .mega{font-size:118px;font-weight:900;line-height:1;letter-spacing:-.045em;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.tpl-zsb .quote-box{margin-top:38px;background:var(--grad);color:#fff;border-radius:var(--radius-lg);
+  padding:38px 48px;box-shadow:0 28px 64px rgba(29,78,216,.32);max-width:none}
+.tpl-zsb .quote-box .q{font-size:30px;font-weight:800;line-height:1.4;letter-spacing:-.01em}
+.tpl-zsb .thanks-points{display:flex;gap:46px;margin-top:34px;flex-wrap:wrap}
+.tpl-zsb .thanks-points .tp{max-width:30ch}
+.tpl-zsb .thanks-points .tp h4{font-size:19px;font-weight:800;color:var(--text-1);margin:0 0 6px;display:flex;align-items:center;gap:9px}
+.tpl-zsb .thanks-points .tp h4 i{width:10px;height:10px;border-radius:50%;background:var(--grad);display:inline-block}
+.tpl-zsb .thanks-points .tp p{font-size:16px;line-height:1.6;color:var(--text-2);margin:0}
+
+.tpl-zsb .deck-footer{color:var(--text-3)}
